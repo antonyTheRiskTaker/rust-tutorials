@@ -7,7 +7,7 @@ fn main() {
 
     if food == "cookie" {
         println!("I like cookies too!");
-        if {} // Can also insert an if statement inside an if statement.
+        // if {} // Can also insert an if statement inside an if statement.
     } else if food == "fruit" {
         println!("That sounds healthy!");
     } else if food == "bread" {
