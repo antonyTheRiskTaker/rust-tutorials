@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "twt_rust_tutorial"
+name = "rust_tutorials"
 version = "0.1.0"
