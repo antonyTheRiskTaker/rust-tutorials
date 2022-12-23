@@ -10,8 +10,16 @@ fn main() {
 
     // println!("{}, world!", s1); // s1 is invalidated, so it won't compile
 
-    let s1 = String::from("hello");
-    let s2 = s1.clone();
+    // let s1 = String::from("hello");
+    // let s2 = s1.clone();
 
-    println!("s1 = {}, s2 = {}", s1, s2);
+    // println!("s1 = {}, s2 = {}", s1, s2);
+
+    let s = String::from("hello");
+
+    change(&s);
+}
+
+fn change(some_string: &String) {
+    some_string.push_str(", world");
 }
