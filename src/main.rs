@@ -1,5 +1,5 @@
 // use std::vec;
-use unicode_segmentation::UnicodeSegmentation;
+// use unicode_segmentation::UnicodeSegmentation;
 
 // enum SpreadsheetCell {
 //     Int(i32),
@@ -70,7 +70,7 @@ fn main() {
 
     // println!("{}", s1);
 
-    let hello = String::from("नमस्ते");
+    // let hello = String::from("नमस्ते");
 
     // for b in "नमस्ते".bytes() {
     //     println!("{}", b);
