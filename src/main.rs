@@ -1,3 +1,11 @@
+use std::vec;
+
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
 fn main() {
     // let a = [1, 2, 3];
     // let mut v:Vec<i32> = Vec::new();
@@ -20,4 +28,22 @@ fn main() {
     //     Some(third) => println!("The third element is {}", third),
     //     None => println!("There is no third element."),
     // }
+
+    // let mut v = vec![1, 2, 3, 4, 5];
+
+    // Iterate vector elements
+    // for i in &mut v {
+    //     *i += 50;
+    //     println!("{}", i);
+    // }
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
+
+    match &row[1] {
+        SpreadsheetCell::Int(i) => println!("{}", i),
+        _ => println!("Not an integer!"),
+    };
 }
