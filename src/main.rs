@@ -73,7 +73,7 @@
 // }
 
 //* Traits
-use rust_tutorials::{Summary, Tweet};
+// use rust_tutorials::{Summary, Tweet};
 
 fn main() {
     // let number_list = vec![34, 50, 25, 100, 65];
@@ -131,6 +131,31 @@ fn main() {
 
     // println!("New article available! {}", article.summarize());
 
+    //* Lifetimes
 
+    // let r;
 
+    // {
+    //     let x = 5;
+    //     r = &x;
+    // }
+
+    // println!("r: {}", r);
+
+    let string1 = String::from("abcd");
+    let string2 = "xyz";
+    // TODO: continue from Listing 10-22
+
+    let result = longest(string1.as_str(), string2);
+    println!("The longest string is {}.", result);
+}
+
+// This function definition specifies that all the references in the signature
+// must have the same lifetime 'a
+fn longest <'a> (x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
 }
