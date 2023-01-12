@@ -51,9 +51,9 @@
 //             );
 //         }
 
-        Guess { value }
-    }
-}
+//         Guess { value }
+//     }
+// }
 
 #[cfg(test)]
 mod tests {
