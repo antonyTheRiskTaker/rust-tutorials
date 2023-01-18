@@ -1,6 +1,8 @@
 use std::env;
 use std::process;
 
+use rust_tutorials::Config;
+
 fn main() {
     let args: Vec<String> = env::args().collect();
     // dbg!(args);
@@ -14,7 +16,7 @@ fn main() {
     println!("Searching for {}", config.query);
     println!("In file {}", config.file_path);
 
-    if let Err(e) = run(config) {
+    if let Err(e) = rust_tutorials::run(config) {
         println!("Application error: {e}");
         process::exit(1);
     }
