@@ -1,7 +1,7 @@
 use std::{
     error::Error,
     fs,
-    env,
+    // env,
 };
 
 
@@ -19,10 +19,16 @@ impl Config {
 
         let query = args[1].clone();
         let file_path = args[2].clone();
+        let case_insensitive = 
+            if args.len() > 3 { args[3].clone() } else { String::new() };
 
-        // TODO: use cmd args to control case sensitivity
-        let ignore_case = env::var("IGNORE_CASE")
-            .is_ok();
+        // ! Comment this out for the time being,
+        // ! so that we can test setting case sensitivity using cmd args.
+        // let ignore_case = env::var("IGNORE_CASE")
+        //     .is_ok();
+
+        let ignore_case = 
+            if case_insensitive == "case-insensitive" { true } else { false };
 
         Ok(Config { 
             query, 
