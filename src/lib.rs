@@ -24,6 +24,7 @@ impl Config {
 
         // ! Comment this out for the time being,
         // ! so that we can test setting case sensitivity using cmd args.
+        // TODO: add env var back and decide precedence of the two settings
         // let ignore_case = env::var("IGNORE_CASE")
         //     .is_ok();
 
