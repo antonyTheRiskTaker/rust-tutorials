@@ -20,6 +20,7 @@ impl Config {
         let query = args[1].clone();
         let file_path = args[2].clone();
 
+        // TODO: use cmd args to control case sensitivity
         let ignore_case = env::var("IGNORE_CASE")
             .is_ok();
 
