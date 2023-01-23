@@ -105,5 +105,11 @@ fn main() {
     // println!("{:#?}", list);
     // println!("{:#?}, sorted in {num_sort_operations} operations", list);
 
-    println!("Hello world!");
+    //* Listing 13-10: Creating an iterator
+    // let v1 = vec![1, 2, 3];
+    // let v1_iter = v1.iter();
+
+    // for val in v1_iter { // Listing 13-11
+    //     println!("Got: {val}");
+    // }
 }
