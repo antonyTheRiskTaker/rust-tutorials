@@ -33,11 +33,11 @@
 //     }
 // }
 
-#[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
+// #[derive(Debug)]
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
+// }
 
 fn main() {
     // let store = Inventory {
@@ -79,11 +79,11 @@ fn main() {
     // borrows_mutably();
     // println!("After calling closure: {:?}", list);
 
-    let mut list = [
-        Rectangle { width: 10, height: 1 },
-        Rectangle { width: 3, height: 5 },
-        Rectangle { width: 7, height: 12 },
-    ];
+    // let mut list = [
+    //     Rectangle { width: 10, height: 1 },
+    //     Rectangle { width: 3, height: 5 },
+    //     Rectangle { width: 7, height: 12 },
+    // ];
 
     // let mut sort_operations = vec![];
     // let value = String::from("by key called");
@@ -94,16 +94,16 @@ fn main() {
     //     r.width
     // });
 
-    let mut num_sort_operations = 0;
-    list.sort_by_key(|r| {
-        num_sort_operations += 1;
-        r.width
-    });
+    // let mut num_sort_operations = 0;
+    // list.sort_by_key(|r| {
+    //     num_sort_operations += 1;
+    //     r.width
+    // });
 
     // closure that applies `FnOnce`
     // list.sort_by_key(|r| r.width);
     // println!("{:#?}", list);
-    println!("{:#?}, sorted in {num_sort_operations} operations", list);
+    // println!("{:#?}, sorted in {num_sort_operations} operations", list);
 
-    // TODO: continue from Listing 13-8
+    println!("Hello world!");
 }
