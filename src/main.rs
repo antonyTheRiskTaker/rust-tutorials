@@ -112,4 +112,23 @@ fn main() {
     // for val in v1_iter { // Listing 13-11
     //     println!("Got: {val}");
     // }
+
+    // let v1: Vec<i32> = vec![1, 2, 3];
+
+    // ! Error
+    // v1.iter().map(|x| x + 1);
+
+    //* The `map` method is an iterator adaptor, one that produces a different iterator by changing some aspect of the original iterator
+    // let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();
+    // println!("{:?}", v2);
 }
+
+// fn iterator_sum() {
+//     let v1 = vec![1, 2, 3];
+
+//     let v1_iter = v1.iter();
+
+//     let total: i32 = v1_iter.sum();
+
+//     println!("{}", total);
+// }
