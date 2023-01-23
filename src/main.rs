@@ -85,8 +85,25 @@ fn main() {
         Rectangle { width: 7, height: 12 },
     ];
 
-    list.sort_by_key(|r| r.width);
-    println!("{:#?}", list);
+    // let mut sort_operations = vec![];
+    // let value = String::from("by key called");
+
+    // This doesn't work (see explanation below Listing 13-8)
+    // list.sort_by_key(|r| {
+    //     sort_operations.push(value);
+    //     r.width
+    // });
+
+    let mut num_sort_operations = 0;
+    list.sort_by_key(|r| {
+        num_sort_operations += 1;
+        r.width
+    });
+
+    // closure that applies `FnOnce`
+    // list.sort_by_key(|r| r.width);
+    // println!("{:#?}", list);
+    println!("{:#?}, sorted in {num_sort_operations} operations", list);
 
     // TODO: continue from Listing 13-8
 }
