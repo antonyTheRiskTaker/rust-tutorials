@@ -1,14 +1,14 @@
-// Importing code according to the internal structure of the library
-// that is more relevant to those who develop it.
-// use rust_tutorials::kinds::PrimaryColor;
-// use rust_tutorials::utils::mix;
+enum List {
+    Cons(i32, List),
+    Nil,
+}
 
-// Using the re-exported types and functions
-use rust_tutorials::mix;
-use rust_tutorials::PrimaryColor;
+use crate::List::{Cons, Nil};
 
 fn main() {
-    let red = PrimaryColor::Red;
-    let yellow = PrimaryColor::Yellow;
-    mix(red, yellow);
+    // let b = Box::new(5);
+    // println!("b = {b}");
+
+    let list = Cons(1, Cons(2, Cons(3, Nil)));
+    // TODO: continue from `Computing the Size of a Non-Recursive Type`
 }
