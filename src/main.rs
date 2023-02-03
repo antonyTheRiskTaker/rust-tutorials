@@ -1,4 +1,4 @@
-use std::ops::Deref;
+// use std::ops::Deref;
 
 // Error! Without using Box<T> for this recursive type
 // enum List {
@@ -14,22 +14,33 @@ use std::ops::Deref;
 // use crate::List::{Cons, Nil};
 
 // Implement the Deref trait for user-defined MyBox<T>
-impl<T> Deref for MyBox<T> {
-    type Target = T;
+// impl<T> Deref for MyBox<T> {
+//     type Target = T;
 
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+//     fn deref(&self) -> &Self::Target {
+//         &self.0
+//     }
+// }
 
 // Defining our own smart pointer
-struct MyBox<T>(T);
+// struct MyBox<T>(T);
 
-impl <T> MyBox<T> {
-    fn new(x: T) -> MyBox<T> {
-        MyBox(x)
-    }
-}
+// impl <T> MyBox<T> {
+//     fn new(x: T) -> MyBox<T> {
+//         MyBox(x)
+//     }
+// }
+
+// Running Code on Cleanup with the Drop Trait
+// struct CustomSmartPointer {
+//     data: String,
+// }
+
+// impl Drop for CustomSmartPointer {
+//     fn drop(&mut self) {
+//         println!("Dropping CustomSmartPointer with data `{}`!", self.data);
+//     }
+// }
 
 fn main() {
     // let b = Box::new(5);
@@ -54,11 +65,24 @@ fn main() {
     // assert_eq!(5, x);
     // assert_eq!(5, *y);
 
-    let m = MyBox::new(String::from("Rust"));
-    hello(&m);
+    // let m = MyBox::new(String::from("Rust"));
+    // hello(&m);
+
+    // Running Code on Cleanup with the Drop Trait
+    // let c = CustomSmartPointer {
+    //     data: String::from("my stuff"),
+    // };
+
+    // let d = CustomSmartPointer {
+    //     data: String::from("other stuff"),
+    // };
+
+    // println!("CustomSmartPointers created.");
+    // drop(c);
+    // println!("CustomSmartPointer dropped before the end of main.");
     
 }
 
-fn hello(name: &str) {
-    println!("Hello, {name}!");
-}
+// fn hello(name: &str) {
+//     println!("Hello, {name}!");
+// }
