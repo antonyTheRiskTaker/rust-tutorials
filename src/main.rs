@@ -107,6 +107,12 @@ fn main() {
     // }
     // println!("count after c goes out of scope = {}", Rc::strong_count(&a));
     
+    // Error: A Mutable Borrow to an Immutable Value
+    // let x = 5;
+    // let y = &mut x;
+
+    // TODO: continue from `A Use Case for Interior Mutability: Mock Objects`
+
 }
 
 // fn hello(name: &str) {
