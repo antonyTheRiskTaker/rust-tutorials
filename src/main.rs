@@ -152,7 +152,7 @@ fn main() {
     // let x = 5;
     // let y = &mut x;
 
-    // TODO: continue from `A Use Case for Interior Mutability: Mock Objects`
+    
 
 }
 
