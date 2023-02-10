@@ -18,15 +18,32 @@
 //     Nil,
 // }
 
-#[derive(Debug)]
-enum List {
-    Cons(Rc<RefCell<i32>>, Rc<List>),
-    Nil,
-}
+// #[derive(Debug)]
+// enum List {
+//     Cons(Rc<RefCell<i32>>, Rc<List>),
+//     Nil,
+// }
 
 use crate::List::{Cons, Nil};
 use std::cell::RefCell;
 use std::rc::Rc;
+
+#[derive(Debug)]
+enum List {
+    Cons(i32, RefCell<Rc<List>>),
+    Nil,
+}
+
+impl List {
+    fn tail(&self) -> Option<&RefCell<Rc<List>>> {
+        match self {
+            Cons(_, item) => Some(item),
+            Nil => None,
+        }
+    }
+}
+
+// TODO: continue from Listing 15-25
 
 // Implement the Deref trait for user-defined MyBox<T>
 // impl<T> Deref for MyBox<T> {
@@ -121,18 +138,18 @@ fn main() {
     // let x = 5;
     // let y = &mut x;
 
-    let value = Rc::new(RefCell::new(5));
+    // let value = Rc::new(RefCell::new(5));
 
-    let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
+    // let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
 
-    let b = Cons(Rc::new(RefCell::new(3)), Rc::clone(&a));
-    let c = Cons(Rc::new(RefCell::new(4)), Rc::clone(&a));
+    // let b = Cons(Rc::new(RefCell::new(3)), Rc::clone(&a));
+    // let c = Cons(Rc::new(RefCell::new(4)), Rc::clone(&a));
 
-    *value.borrow_mut() += 10;
+    // *value.borrow_mut() += 10;
 
-    println!("a after = {:?}", a);
-    println!("b after = {:?}", b);
-    println!("c after = {:?}", c);
+    // println!("a after = {:?}", a);
+    // println!("b after = {:?}", b);
+    // println!("c after = {:?}", c);
 }
 
 // fn hello(name: &str) {
