@@ -25,8 +25,14 @@
 // }
 
 // use crate::List::{Cons, Nil};
-// use std::cell::RefCell;
-// use std::rc::Rc;
+use std::cell::RefCell;
+use std::rc::Rc;
+
+#[derive(Debug)]
+struct Node {
+    value: i32,
+    children: RefCell<Vec<Rc<Node>>>,
+}
 
 // #[derive(Debug)]
 // enum List {
@@ -171,8 +177,17 @@ fn main() {
     // it will overflow the stack
     // println!("a next item = {:?}", a.tail());
 
-    // TODO: continue from `Preventing References Cycles: Turning an Rc<T> into
-    // TODO: a Weak<T>`
+    let leaf = Rc::new(Node {
+        value: 3,
+        children: RefCell::new(vec![]),
+    });
+
+    let branch = Rc::new(Node {
+        value: 5,
+        children: RefCell::new(vec![Rc::clone(&leaf)]),
+    });
+
+    // TODO: continue from `Adding a Reference from a Child to Its Parent`
 }
 
 // fn hello(name: &str) {
