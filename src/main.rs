@@ -1,4 +1,4 @@
-// use std::thread;
+use std::thread;
 // use std::time::Duration;
 // use std::sync::mpsc;
 use std::sync::Mutex;
@@ -68,14 +68,32 @@ fn main() {
     //     println!("Got: {received}");
     // }
 
-    let m = Mutex::new(5);
+    // let m = Mutex::new(5);
 
-    {
-        let mut num = m.lock().unwrap();
-        *num = 6;
+    // {
+    //     let mut num = m.lock().unwrap();
+    //     *num = 6;
+    // }
+
+    // println!("m = {:?}", m);
+    
+    // TODO: continue from `Multiple Ownership with Multiple Threads`
+
+    let counter = Mutex::new(0);
+    let mut handles = vec![];
+
+    for _ in 0..10 {
+        let handle = thread::spawn(move || {
+            let mut num = counter.lock().unwrap();
+
+            *num += 1;
+        });
+        handles.push(handle);
     }
 
-    println!("m = {:?}", m);
-    
-    // TODO: continue from `Sharing a Mutex<T> Between Multiple Threads`
+    for handle in handles {
+        handle.join().unwrap();
+    }
+
+    println!("Result: {}", *counter.lock().unwrap());
 }
