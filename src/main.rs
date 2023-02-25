@@ -2,6 +2,7 @@ use std::thread;
 // use std::time::Duration;
 // use std::sync::mpsc;
 use std::sync::Mutex;
+use std::rc::Rc;
 
 fn main() {
     // let handle = thread::spawn(|| {
@@ -79,10 +80,11 @@ fn main() {
     
     // TODO: continue from `Multiple Ownership with Multiple Threads`
 
-    let counter = Mutex::new(0);
+    let counter = Rc::new(Mutex::new(0));
     let mut handles = vec![];
 
     for _ in 0..10 {
+        let counter = Rc::clone(&counter);
         let handle = thread::spawn(move || {
             let mut num = counter.lock().unwrap();
 
