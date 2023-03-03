@@ -1,16 +1,18 @@
-use rust_tutorials::{Draw, Button, Screen};
+// use rust_tutorials::{Draw, Button, Screen};
 
-struct SelectBox {
-    width: u32,
-    height: u32,
-    options: Vec<String>,
-}
+// struct SelectBox {
+//     width: u32,
+//     height: u32,
+//     options: Vec<String>,
+// }
 
-impl Draw for SelectBox {
-    fn draw(&self) {
-        // code to actually draw a select box
-    }
-}
+// impl Draw for SelectBox {
+//     fn draw(&self) {
+//         // code to actually draw a select box
+//     }
+// }
+
+use rust_tutorials::Post;
 
 fn main() {
     // let screen = Screen {
@@ -32,9 +34,21 @@ fn main() {
     //     ],
     // };
 
-    let screen = Screen {
-        components: vec![Box::new(String::from("Hi"))],
-    };
+    // let screen = Screen {
+    //     components: vec![Box::new(String::from("Hi"))],
+    // };
 
-    screen.run();
+    // screen.run();
+
+    let mut post = Post::new();
+
+    post.add_text("I ate a salad for lunch today");
+    assert_eq!("", post.content());
+
+    post.request_review();
+    assert_eq!("", post.content());
+
+    post.approve();
+    assert_eq!("I ate a salad for lunch today", post.content());
+
 }
