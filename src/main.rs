@@ -27,9 +27,19 @@ fn main() {
     //     println!("{top}");
     // }
 
-    let v = vec!['a', 'b', 'c'];
+    // let v = vec!['a', 'b', 'c'];
 
-    for (index, value) in v.iter().enumerate() {
-        println!("{value} is at index {index}");
-    }
+    // for (index, value) in v.iter().enumerate() {
+    //     println!("{value} is at index {index}");
+    // }
+
+    //! Error
+    // let (x, y) = (1, 2, 3);
+
+    let point = (3, 5);
+    print_coordinates(&point);
+}
+
+fn print_coordinates(&(x, y): &(i32, i32)) {
+    println!("Current locationL ({x}, {y})");
 }
