@@ -36,10 +36,22 @@ fn main() {
     //! Error
     // let (x, y) = (1, 2, 3);
 
-    let point = (3, 5);
-    print_coordinates(&point);
+    // let point = (3, 5);
+    // print_coordinates(&point);
+
+    
+    // let some_option_value: Option<i32> = None;
+    // let Some(x) = some_option_value; //! Error
+
+    // if let Some(x) = some_option_value {
+    //     println!("{x}");
+    // }
+
+    // if let x = 5 {
+    //     println!("{x}");
+    // }
 }
 
-fn print_coordinates(&(x, y): &(i32, i32)) {
-    println!("Current locationL ({x}, {y})");
-}
+// fn print_coordinates(&(x, y): &(i32, i32)) {
+//     println!("Current locationL ({x}, {y})");
+// }
