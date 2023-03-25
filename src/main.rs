@@ -60,16 +60,39 @@ fn main() {
     //     _ => println!("anything"),
     // }
 
-    let x = Some(5);
-    let y = 10;
+    // let x = Some(5);
+    // let y = 10;
+
+    // match x {
+    //     Some(50) => println!("Got 50"),
+    //     Some(y) => println!("Match, y = {y}"),
+    //     _ => println!("Default case, x = {:?}", x),
+    // }
+
+    // println!("at the end: x = {:?}, y = {y}", x);
+
+    // let x = 1;
+
+    // match x {
+    //     1 | 2 => println!("one or two"),
+    //     3 => println!("three"),
+    //     _ => println!("anything"),
+    // }
+
+    // let x = 5;
+
+    // match x {
+    //     1..=5 => println!("one through five"),
+    //     _ => println!("somethings else"),
+    // }
+
+    let x = 'c';
 
     match x {
-        Some(50) => println!("Got 50"),
-        Some(y) => println!("Match, y = {y}"),
-        _ => println!("Default case, x = {:?}", x),
+        'a'..='j' => println!("early ASCII letter"),
+        'k'..='z' => println!("late ASCII letter"),
+        _ => println!("something else"),
     }
-
-    println!("at the end: x = {:?}, y = {y}", x);
 }
 
 // fn print_coordinates(&(x, y): &(i32, i32)) {
