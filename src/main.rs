@@ -3,17 +3,17 @@
 //     y: i32,
 // }
 
-enum Color {
-    Rgb(i32, i32, i32),
-    Hsv(i32, i32, i32),
-}
+// enum Color {
+//     Rgb(i32, i32, i32),
+//     Hsv(i32, i32, i32),
+// }
 
-enum Message {
-    Quit,
-    Move { x: i32, y: i32 },
-    Write(String),
-    ChangeColor(Color),
-}
+// enum Message {
+//     Quit,
+//     Move { x: i32, y: i32 },
+//     Write(String),
+//     ChangeColor(Color),
+// }
 
 fn main() {
     // let favorite_color: Option<&str> = None;
@@ -147,19 +147,25 @@ fn main() {
     //     }
     // }
 
-    let msg = Message::ChangeColor(Color::Hsv(0, 160, 255));
+    // let msg = Message::ChangeColor(Color::Hsv(0, 160, 255));
 
-    match msg {
-        Message::ChangeColor(Color::Rgb(r, g, b)) => {
-            println!("Change color to red {r}, green {g}, and blue {b}");
-        }
-        Message::ChangeColor(Color::Hsv(h, s, v)) => {
-            println!("Change color to hue {h}, saturation {s}, value {v}");
-        }
-        _ => (),
-    }
+    // match msg {
+    //     Message::ChangeColor(Color::Rgb(r, g, b)) => {
+    //         println!("Change color to red {r}, green {g}, and blue {b}");
+    //     }
+    //     Message::ChangeColor(Color::Hsv(h, s, v)) => {
+    //         println!("Change color to hue {h}, saturation {s}, value {v}");
+    //     }
+    //     _ => (),
+    // }
+
+    foo(3, 4);
 }
 
 // fn print_coordinates(&(x, y): &(i32, i32)) {
 //     println!("Current locationL ({x}, {y})");
 // }
+
+fn foo(_: i32, y: i32) {
+    println!("This code only uses the y parameter: {y}");
+}
