@@ -56,7 +56,6 @@ fn main() {
     // let point = (3, 5);
     // print_coordinates(&point);
 
-    
     // let some_option_value: Option<i32> = None;
     // let Some(x) = some_option_value; //! Error
 
@@ -175,13 +174,35 @@ fn main() {
 
     // println!("setting is {:?}", setting_value);
 
-    let numbers = (2, 4, 8, 16, 32);
+    // let numbers = (2, 4, 8, 16, 32);
 
-    match numbers {
-        (first, _, third, _, fifth) => {
-            println!("Some numbers: {first}, {third}, {fifth}");
-        }
+    // match numbers {
+    //     (first, _, third, _, fifth) => {
+    //         println!("Some numbers: {first}, {third}, {fifth}");
+    //     }
+    // }
+
+    // let _x = 5;
+    // let y = 10;
+
+    // Using a variable whose name is preceded by an underscore binds a value
+    // to its name.
+    // let s = Some(String::from("Hello!"));
+
+    // if let Some(_s) = s {
+    //     println!("found a string");
+    // }
+
+    // println!("{:?}", s);
+
+    // Using an underscore does not bind the value.
+    let s = Some(String::from("Hello!"));
+
+    if let Some(_) = s {
+        println!("found a string");
     }
+
+    println!("{:?}", s);
 }
 
 // fn print_coordinates(&(x, y): &(i32, i32)) {
