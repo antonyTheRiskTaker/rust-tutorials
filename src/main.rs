@@ -15,6 +15,12 @@
 //     ChangeColor(Color),
 // }
 
+// struct Point {
+//     x: i32,
+//     y: i32,
+//     z: i32,
+// }
+
 fn main() {
     // let favorite_color: Option<&str> = None;
     // let is_tuesday = false;
@@ -196,13 +202,35 @@ fn main() {
     // println!("{:?}", s);
 
     // Using an underscore does not bind the value.
-    let s = Some(String::from("Hello!"));
+    // let s = Some(String::from("Hello!"));
 
-    if let Some(_) = s {
-        println!("found a string");
-    }
+    // if let Some(_) = s {
+    //     println!("found a string");
+    // }
 
-    println!("{:?}", s);
+    // println!("{:?}", s);
+
+    // let origin = Point { x: 0, y: 0, z: 0};
+
+    // match origin {
+    //     Point {x, .. } => println!("x is {x}"),
+    // }
+
+    // let numbers = (2, 4, 8, 16, 32);
+
+    // match numbers {
+    //     (first, .., last) => {
+    //         println!("Some numbersL {first}, {last}");
+    //     }
+    // }
+
+    // match numbers {
+    //     (.., second, ..) => {
+    //         println!("Some numbers: {second}");
+    //     }
+    // }
+
+    
 }
 
 // fn print_coordinates(&(x, y): &(i32, i32)) {
