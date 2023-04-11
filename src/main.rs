@@ -6,13 +6,13 @@
 
 // static HELLO_WORLD: &str = "Hello, world!";
 
-static mut COUNTER: u32 = 0;
+// static mut COUNTER: u32 = 0;
 
-fn add_to_count(inc: u32) {
-    unsafe {
-        COUNTER += inc;
-    }
-}
+// fn add_to_count(inc: u32) {
+//     unsafe {
+//         COUNTER += inc;
+//     }
+// }
 
 fn main() {
     // let mut num = 5;
@@ -54,11 +54,13 @@ fn main() {
 
     // println!("name is: {HELLO_WORLD}");
 
-    add_to_count(3);
+    // add_to_count(3);
 
-    unsafe {
-        println!("COUNTER: {COUNTER}");
-    }
+    // unsafe {
+    //     println!("COUNTER: {COUNTER}");
+    // }
+
+    // TODO: continue ch.19.2 from here
 }
 
 // unsafe fn dangerous() {}
