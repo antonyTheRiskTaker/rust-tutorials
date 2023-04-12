@@ -60,7 +60,7 @@ fn main() {
     //     println!("COUNTER: {COUNTER}");
     // }
 
-    // TODO: continue ch.19.2 from here
+    // TODO: continue from `Default Generic Type Parameters and Operator Overloading`
 }
 
 // unsafe fn dangerous() {}
