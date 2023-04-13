@@ -60,7 +60,7 @@ fn main() {
     //     println!("COUNTER: {COUNTER}");
     // }
 
-    // TODO: continue from `Default Generic Type Parameters and Operator Overloading`
+    // TODO: continue from `Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name`
 }
 
 // unsafe fn dangerous() {}
