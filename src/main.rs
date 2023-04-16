@@ -14,31 +14,49 @@
 //     }
 // }
 
-trait Pilot {
-    fn fly(&self);
+// trait Pilot {
+//     fn fly(&self);
+// }
+
+// trait Wizard {
+//     fn fly(&self);
+// }
+
+// struct Human;
+
+// impl Pilot for Human {
+//     fn fly(&self) {
+//         println!("This is your captain speaking.");
+//     }
+// }
+
+// impl Wizard for Human {
+//     fn fly(&self) {
+//         println!("Up!");
+//     }
+// }
+
+// impl Human {
+//     fn fly(&self) {
+//         println!("*waving arms furiously*");
+//     }
+// }
+
+trait Animal {
+    fn baby_name() -> String;
 }
 
-trait Wizard {
-    fn fly(&self);
-}
+struct Dog;
 
-struct Human;
-
-impl Pilot for Human {
-    fn fly(&self) {
-        println!("This is your captain speaking.");
+impl Dog {
+    fn baby_name() -> String {
+        String::from("Spot")
     }
 }
 
-impl Wizard for Human {
-    fn fly(&self) {
-        println!("Up!");
-    }
-}
-
-impl Human {
-    fn fly(&self) {
-        println!("*waving arms furiously*");
+impl Animal for Dog {
+    fn baby_name() -> String {
+        String::from("puppy")
     }
 }
 
@@ -88,10 +106,13 @@ fn main() {
     //     println!("COUNTER: {COUNTER}");
     // }
 
-    let person = Human;
-    Pilot::fly(&person);
-    Wizard::fly(&person);
-    person.fly();
+    // let person = Human;
+    // Pilot::fly(&person);
+    // Wizard::fly(&person);
+    // person.fly();
+
+    println!("A baby dog is called a {}", Dog::baby_name());
+    // TODO: continue from Listing 19-19
 }
 
 // unsafe fn dangerous() {}
