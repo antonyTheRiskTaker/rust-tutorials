@@ -42,23 +42,23 @@
 //     }
 // }
 
-trait Animal {
-    fn baby_name() -> String;
-}
+// trait Animal {
+//     fn baby_name() -> String;
+// }
 
-struct Dog;
+// struct Dog;
 
-impl Dog {
-    fn baby_name() -> String {
-        String::from("Spot")
-    }
-}
+// impl Dog {
+//     fn baby_name() -> String {
+//         String::from("Spot")
+//     }
+// }
 
-impl Animal for Dog {
-    fn baby_name() -> String {
-        String::from("puppy")
-    }
-}
+// impl Animal for Dog {
+//     fn baby_name() -> String {
+//         String::from("puppy")
+//     }
+// }
 
 fn main() {
     // let mut num = 5;
@@ -111,8 +111,10 @@ fn main() {
     // Wizard::fly(&person);
     // person.fly();
 
-    println!("A baby dog is called a {}", Dog::baby_name());
-    // TODO: continue from Listing 19-19
+    // println!("A baby dog is called a {}", <Dog as Animal>::baby_name());
+
+    // TODO: continue from `Using Supertraits to Require One Trait's Functionality Within Another Trait`
+    
 }
 
 // unsafe fn dangerous() {}
