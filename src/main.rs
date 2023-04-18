@@ -74,9 +74,10 @@ trait OutlinePrint: fmt::Display {
     }
 }
 
-// TODO: continue from Listing 19-22
-
 fn main() {
+
+    // TODO: continue from Listing 19-22
+
     // let mut num = 5;
 
     // let r1 = &num as *const i32;
