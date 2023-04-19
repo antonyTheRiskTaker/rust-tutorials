@@ -87,6 +87,8 @@ impl fmt::Display for Point {
     }
 }
 
+// TODO: continue from `Using the Newtype Pattern to Implement External Traits on External Types`
+
 fn main() {
 
     // let mut num = 5;
