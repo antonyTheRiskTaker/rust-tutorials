@@ -74,9 +74,20 @@ trait OutlinePrint: fmt::Display {
     }
 }
 
-fn main() {
+struct Point {
+    x: i32,
+    y: i32,
+}
 
-    // TODO: continue from Listing 19-22
+impl OutlinePrint for Point {}
+
+impl fmt::Display for Point {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "({}, {})", self.x, self.y)
+    }
+}
+
+fn main() {
 
     // let mut num = 5;
 
