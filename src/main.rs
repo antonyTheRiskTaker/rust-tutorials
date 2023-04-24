@@ -97,7 +97,7 @@
 //     }
 // }
 
-// TODO: continue from `Dynamically Sized Types and the Sized Trait`
+// TODO: continue from ch.19.4
 
 fn main() {
 
