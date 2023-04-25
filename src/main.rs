@@ -97,7 +97,13 @@
 //     }
 // }
 
-// TODO: continue from ch.19.4
+fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
+    f(arg) + f(arg)
+}
 
 fn main() {
 
@@ -174,6 +180,12 @@ fn main() {
     // fn returns_long_type() -> Thunk {
         // --snip--
     // }
+
+    let answer = do_twice(add_one, 5);
+
+    println!("The answer is: {}", answer);
+    
+    // TODO: continue from Listing 19-27
 }
 
 // unsafe fn dangerous() {}
