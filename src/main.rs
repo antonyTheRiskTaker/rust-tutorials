@@ -185,7 +185,7 @@ fn main() {
 
     println!("The answer is: {}", answer);
     
-    // TODO: continue from Listing 19-27
+    // TODO: continue from `Returning Closures`
 }
 
 // unsafe fn dangerous() {}
