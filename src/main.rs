@@ -105,6 +105,8 @@
 //     f(arg) + f(arg)
 // }
 
+// TODO: continue from `The Difference Between Macros and Functions`
+
 fn main() {
 
     // let mut num = 5;
