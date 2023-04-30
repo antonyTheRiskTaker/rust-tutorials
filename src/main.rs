@@ -105,7 +105,7 @@
 //     f(arg) + f(arg)
 // }
 
-// TODO: continue from `Declarative Macros with macro_rules! for General Metaprogramming`
+// TODO: continue from Listing 19-28
 
 fn main() {
 
