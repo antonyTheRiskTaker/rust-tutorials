@@ -105,7 +105,7 @@
 //     f(arg) + f(arg)
 // }
 
-// TODO: continue from `The Difference Between Macros and Functions`
+// TODO: continue from `Declarative Macros with macro_rules! for General Metaprogramming`
 
 fn main() {
 
