@@ -105,7 +105,7 @@
 //     f(arg) + f(arg)
 // }
 
-// TODO: continue from Listing 19-28
+// TODO: continue from `Procedural Macros for Generating Code from Attributes`
 
 fn main() {
 
