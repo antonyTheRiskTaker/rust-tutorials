@@ -105,7 +105,7 @@
 //     f(arg) + f(arg)
 // }
 
-// TODO: continue from `Procedural Macros for Generating Code from Attributes`
+// TODO: continue from `How to Write a Custom derive Macro`
 
 fn main() {
 
