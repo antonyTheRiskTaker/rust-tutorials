@@ -105,7 +105,7 @@
 //     f(arg) + f(arg)
 // }
 
-// TODO: continue from `How to Write a Custom derive Macro`
+// TODO: continue from Listing 19-30
 
 fn main() {
 
