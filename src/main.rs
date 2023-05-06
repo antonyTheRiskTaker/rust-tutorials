@@ -105,8 +105,6 @@
 //     f(arg) + f(arg)
 // }
 
-// TODO: continue from Listing 19-31
-
 fn main() {
 
     // let mut num = 5;

@@ -97,7 +97,13 @@
 //     }
 // }
 
-// TODO: continue from `Dynamically Sized Types and the Sized Trait`
+// fn add_one(x: i32) -> i32 {
+//     x + 1
+// }
+
+// fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
+//     f(arg) + f(arg)
+// }
 
 fn main() {
 
@@ -174,6 +180,10 @@ fn main() {
     // fn returns_long_type() -> Thunk {
         // --snip--
     // }
+
+    // let answer = do_twice(add_one, 5);
+
+    // println!("The answer is: {}", answer);
 }
 
 // unsafe fn dangerous() {}
@@ -192,4 +202,8 @@ fn main() {
 //     }
 
     // (&mut values[..mid], &mut values[mid..])
+// }
+
+// fn return_closure() -> Box<dyn Fn(i32) -> i32> {
+//     Box::new(|x| x + 1)
 // }
