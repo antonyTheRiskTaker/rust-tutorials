@@ -8,5 +8,5 @@ fn main() {
         println!("Connection established!");
     }
 
-    // TODO: continue from Listing 20-1
+    // TODO: continue from `Reading the Request`
 }
