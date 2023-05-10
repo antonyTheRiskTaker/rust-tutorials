@@ -11,7 +11,9 @@ fn main() {
         let stream = stream.unwrap();
 
         handle_connection(stream);
-    }   
+    }
+
+    // TODO: continue from `A Closer Look at an HTTP Request`
 }
 
 fn handle_connection(mut stream: TcpStream) {
