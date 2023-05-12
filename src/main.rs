@@ -13,7 +13,7 @@ fn main() {
         handle_connection(stream);
     }
 
-    // TODO: continue from `A Closer Look at an HTTP Request`
+    // TODO: continue from `Writing a Response`
 }
 
 fn handle_connection(mut stream: TcpStream) {
