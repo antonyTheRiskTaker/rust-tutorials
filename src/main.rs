@@ -43,7 +43,7 @@ fn handle_connection(mut stream: TcpStream) {
 
         stream.write_all(response.as_bytes()).unwrap();
 
-        // TODO: continue from Listing 20-7
+        // TODO: continue from `A Touch of Refactoring`
     }
 
     
