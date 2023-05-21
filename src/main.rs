@@ -16,11 +16,9 @@ fn main() {
         thread::spawn(|| {
             handle_connection(stream);
         });
-
+        // TODO: continue from `Creating a Finite Number of Threads`
     }
 }
-
-// TODO: continue from `Spawning a Thread for Each Request`
 
 fn handle_connection(mut stream: TcpStream) {
     let buf_reader = BufReader::new(&mut stream);
