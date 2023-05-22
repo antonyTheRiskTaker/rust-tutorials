@@ -19,7 +19,7 @@ fn main() {
         });
     }
 
-    // TODO: continue from `Building ThreadPool Using Compiler Driven Development`
+    // TODO: continue from `Validating the Number of Threads in new`
 }
 
 fn handle_connection(mut stream: TcpStream) {
