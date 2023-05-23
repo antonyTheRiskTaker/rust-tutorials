@@ -18,8 +18,6 @@ fn main() {
             handle_connection(stream);
         });
     }
-
-    // TODO: continue from `Validating the Number of Threads in new`
 }
 
 fn handle_connection(mut stream: TcpStream) {
