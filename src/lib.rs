@@ -1,4 +1,8 @@
-pub struct ThreadPool;
+use std::thread;
+
+pub struct ThreadPool {
+    threads: Vec<thread::JoinHandle<()>>,
+}
 
 impl ThreadPool {
     /// Create a new ThreadPool.
@@ -11,10 +15,16 @@ impl ThreadPool {
     pub fn new(size: usize) -> ThreadPool {
         assert!(size > 0);
 
-        ThreadPool
+        let mut threads = Vec::with_capacity(size);
+
+        for _ in 0..size {
+            // Create some threads and store them in the vector
+        }
+
+        ThreadPool { threads }
     }
 
-    // TODO: continue from `Creating Space to Store the Threads`
+    // TODO: continue from `A Worker Struct Responsible for Sending Code from the ThreadPool to a Thread`
 
     pub fn execute<F>(&self, f: F)
     where
