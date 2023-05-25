@@ -30,6 +30,8 @@ impl ThreadPool {
     {}
 }
 
+// TODO: continue from `Sending Requests to Threads via Channels`
+
 struct Worker {
     id: usize,
     thread: thread::JoinHandle<()>,
