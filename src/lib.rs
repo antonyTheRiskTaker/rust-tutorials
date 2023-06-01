@@ -8,6 +8,8 @@ pub struct ThreadPool {
     sender: mpsc::Sender<Job>,
 }
 
+// TODO: continue from Ch.20.3
+
 type Job = Box<dyn FnOnce() + Send + 'static>;
 
 impl ThreadPool {
@@ -48,8 +50,6 @@ struct Worker {
     id: usize,
     thread: thread::JoinHandle<()>,
 }
-
-// TODO: continue from Listing 20-20
 
 impl Worker {
     fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
