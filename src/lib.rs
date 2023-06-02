@@ -8,8 +8,6 @@ pub struct ThreadPool {
     sender: mpsc::Sender<Job>,
 }
 
-// TODO: continue from Ch.20.3
-
 type Job = Box<dyn FnOnce() + Send + 'static>;
 
 impl ThreadPool {
@@ -46,9 +44,23 @@ impl ThreadPool {
     }
 }
 
+impl Drop for ThreadPool {
+    fn drop(&mut self) {
+        for worker in &mut self.workers {
+            println!("Shutting down worker {}", worker.id);
+
+            if let Some(thread) = worker.thread.take() {
+                thread.join().unwrap();
+            }
+        }
+    }
+}
+
+// TODO: continue from `Signaling to the Threads to Stop Listening for Jobs`
+
 struct Worker {
     id: usize,
-    thread: thread::JoinHandle<()>,
+    thread: Option<thread::JoinHandle<()>>,
 }
 
 impl Worker {
@@ -61,6 +73,9 @@ impl Worker {
             job();
         });
 
-        Worker { id, thread }
+        Worker {
+            id,
+            thread: Some(thread),
+        }
     }
 }
