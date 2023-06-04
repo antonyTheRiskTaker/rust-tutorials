@@ -61,8 +61,6 @@ impl Drop for ThreadPool {
     }
 }
 
-// TODO: continue from Listing 20-23
-
 struct Worker {
     id: usize,
     thread: Option<thread::JoinHandle<()>>,
@@ -71,11 +69,19 @@ struct Worker {
 impl Worker {
     fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Job>>>) -> Worker {
         let thread   = thread::spawn(move || loop {
-            let job = receiver.lock().unwrap().recv().unwrap();
-
-            println!("Worker {id} got a job; executing.");
+            let message = receiver.lock().unwrap().recv();
             
-            job();
+            match message {
+                Ok(job) => {
+                    println!("Worker {id} got a job; executing.");
+
+                    job();
+                }
+                Err(_) => {
+                    println!("Worker {id} disconnected; shutting down.");
+                    break;
+                }
+            }
         });
 
         Worker {
